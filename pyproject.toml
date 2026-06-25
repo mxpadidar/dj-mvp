@@ -4,4 +4,7 @@ version = "0.1.0"
 description = "mvp starter with templates and best practices — start building quickly."
 readme = "readme.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = ["django>=6.0.6"]
+
+[dependency-groups]
+dev = ["django-stubs>=6.0.6", "django-stubs-ext>=6.0.6"]
