@@ -7,6 +7,7 @@ ALLOWED_HOSTS = []
 ROOT_URLCONF = "conf.urls"
 WSGI_APPLICATION = "conf.wsgi.application"
 
+AUTH_USER_MODEL = "core.User"
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

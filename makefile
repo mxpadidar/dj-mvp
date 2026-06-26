@@ -14,6 +14,9 @@ migrations:
 migrate:
 	@uv run manage.py migrate
 
+superuser:
+	@uv run manage.py createsuperuser
+
 lint:
 	@uv run ruff format .
 
