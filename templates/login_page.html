@@ -1,0 +1,16 @@
+{% extends "layouts/root.html" %}
+{% block content %}
+  <div class="dj-form center-form">
+    <span class="title">Login</span>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button type="submit" class="btn">Log in</button>
+    </form>
+    <p style="margin-top: 1rem;">
+      Don't have an account?
+      <a href="{% url 'signup' %}" style="text-decoration: underline;">Sign up</a>
+    </p>
+  </div>
+{% endblock %}

@@ -105,3 +105,63 @@ nav {
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
+/* button */
+.btn {
+  width: 100%;
+  padding: 0.3rem;
+  background: var(--accent);
+  color: var(--fg);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--accent-hover);
+  }
+}
+
+/* form */
+.dj-form {
+  border: 1px solid var(--bg-hover);
+  padding: 2rem;
+  margin-inline: auto;
+}
+
+.center-form {
+  margin-top: 2rem;
+  max-width: 400px;
+}
+
+/* django forms */
+form {
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 7px 5px;
+    &:focus {
+      outline: 1px solid var(--fg);
+    }
+  }
+
+  .errorlist {
+    font-size: 0.8rem;
+    list-style: none;
+    margin-block: 0.5rem;
+    padding: 0.5rem;
+    background: var(--error);
+  }
+
+  .helptext {
+    font-size: 0.8rem;
+    color: var(--fg);
+  }
+}

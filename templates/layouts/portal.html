@@ -2,7 +2,16 @@
 {% block header %}
   <header>
     <nav class="container">
-      <a href="/home" class="nav-item brand">djmvp</a>
+      <div>
+        <a href="/home" class="nav-item brand">djmvp</a>
+        <span>welcome {{ user.username }}</span>
+      </div>
+      <div class="nav-links">
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="nav-item">Logout</button>
+        </form>
+      </div>
     </nav>
   </header>
 {% endblock %}
