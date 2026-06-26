@@ -7,6 +7,7 @@
         <span>welcome {{ user.username }}</span>
       </div>
       <div class="nav-links">
+        <a href="/profile" class="nav-item">Profile</a>
         <form method="post" action="{% url 'logout' %}">
           {% csrf_token %}
           <button type="submit" class="nav-item">Logout</button>

@@ -1,0 +1,12 @@
+{% extends "layouts/portal.html" %}
+{% block content %}
+  <div class="profile">
+    {% for key, value in profile %}
+      <div class="key-value-pair">
+        <span class="key">{{ key }}</span>
+        <span class="value">{{ value }}</span>
+      </div>
+    {% endfor %}
+  </div>
+  <a href="{% url 'profile-update' %}" class="link">Edit profile</a>
+{% endblock %}
