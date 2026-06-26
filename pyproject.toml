@@ -26,3 +26,6 @@ line-length = 90
 cache-dir = ".cache/ruff"
 fix = true
 extend-exclude = ["**/migrations/**"]
+
+[tool.jinja-lsp]
+templates = "./tmpl"

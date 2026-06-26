@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --bg: #1f1f1f;
+  --bg-hover: #444444;
+  --fg: #ffffff;
+  --accent: #2f5870;
+  --accent-hover: #417690;
+  --error: #ba2121;
+}
+
+/* reset (cleaned) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base */
+body {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input,
+textarea,
+select {
+  background-color: var(--bg-hover);
+  color: var(--fg);
+  border: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+}
+
+/* header */
+header {
+  background: var(--accent);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2rem;
+  margin-bottom: 1rem;
+
+  .brand {
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nav-item {
+    /* padding: 5px; */
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--fg);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* layout */
+.container {
+  width: min(768px, 100%);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

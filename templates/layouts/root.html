@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <title>{% block title %}{{ title|add:" | djmvp" }}{% endblock %}</title>
+    {% block style %}{% endblock %}
+  </head>
+  <body>
+    {% block header %}{% endblock %}
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
