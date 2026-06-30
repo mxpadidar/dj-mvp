@@ -7,9 +7,9 @@ ALLOWED_HOSTS = []
 ROOT_URLCONF = "conf.urls"
 WSGI_APPLICATION = "conf.wsgi.application"
 
+LOGIN_URL = "/login"
+
 AUTH_USER_MODEL = "core.User"
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "login"
 
 INSTALLED_APPS = [
     "django.contrib.admin",

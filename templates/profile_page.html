@@ -1,12 +1,23 @@
 {% extends "layouts/portal.html" %}
 {% block content %}
-  <div class="profile">
+  <h2 class="page-title">Profile</h2>
+  <div class="grid" style="margin-bottom: 1.5rem;">
     {% for key, value in profile %}
-      <div class="key-value-pair">
-        <span class="key">{{ key }}</span>
-        <span class="value">{{ value }}</span>
+      <div style="display: grid;
+                  grid-template-columns: 12ch 1fr;
+                  gap: 1rem;
+                  border-bottom: 1px solid var(--primary-alt);
+                  padding-bottom: 0.5rem">
+        <span style="font-weight: bold;
+                     color: var(--primary-alt);
+                     text-transform: uppercase;
+                     letter-spacing: 0.03em">{{ key }}</span>
+        <span>{{ value }}</span>
       </div>
     {% endfor %}
   </div>
-  <a href="{% url 'profile-update' %}" class="link">Edit profile</a>
+  <div class="flex" style="gap: 1rem;">
+    <a href="{% url 'profile-update' %}">Edit profile</a>
+    <a href="{% url 'password-change' %}">Change password</a>
+  </div>
 {% endblock %}

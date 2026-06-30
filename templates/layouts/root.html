@@ -6,7 +6,6 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <title>{% block title %}{{ title|add:" | djmvp" }}{% endblock %}</title>
-    {% block style %}{% endblock %}
   </head>
   <body>
     {% block header %}{% endblock %}

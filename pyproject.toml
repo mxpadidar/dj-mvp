@@ -28,4 +28,4 @@ fix = true
 extend-exclude = ["**/migrations/**"]
 
 [tool.jinja-lsp]
-templates = "./tmpl"
+templates = "./templates/"
